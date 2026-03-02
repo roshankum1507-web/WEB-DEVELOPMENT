@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Sticky Navbar</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
+            min-height: 100vh;
+            padding-top: 80px;
+            overflow-x: hidden;
+        }
+
+        
+        nav {
+            background: rgba(34, 34, 34, 0.95);
+            backdrop-filter: blur(20px);
+            width: 32rem;
+            max-width: 90vw;
+            margin: 0 auto;
+            border-radius: 20px;
+            position: sticky;
+            top: 20px;
+            z-index: 1000;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        nav::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(255, 255, 255, 0.05), transparent);
+            border-radius: 20px;
+            z-index: -1;
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            padding: 20px 2px;
+            gap: 5px;
+            list-style: none;
+        }
+
+        .link {
+            position: relative;
+            padding: 12px 20px;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        a {
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: none;
+            color: #e0e0e0;
+            letter-spacing: 0.5px;
+            transition: color 0.3s ease;
+        }
+
+        .link::before,
+        .link::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #00d4ff, #ff6b6b);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 2px;
+        }
+
+        .link::before {
+            top: 0;
+            right: 0;
+            transform-origin: right;
+        }
+
+        .link::after {
+            bottom: 0;
+            left: 0;
+            transform-origin: left;
+        }
+
+        .link:hover::before,
+        .link:hover::after {
+            width: 100%;
+        }
+
+        .link:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 212, 255, 0.3);
+        }
+
+        .link:hover a {
+            color: #fff;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        
+        
+
+        
+        @media (max-width: 768px) {
+            nav {
+                width: 95vw;
+                top: 10px;
+                border-radius: 15px;
+            }
+
+            ul {
+                flex-wrap: wrap;
+                gap: 1px;
+                padding: 2px 0.5px;
+            }
+
+            a {
+                font-size: 5px;
+            }
+        }
+
+        
+        .demo-content {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #e0e0e0;
+            line-height: 1.7;
+        }
+
+        .demo-content h1 {
+            font-size: 2.5rem;
+            background: linear-gradient(45deg, #00d4ff, #ff6b6b);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li class="link active"><a href="#home">Home</a></li>
+            <li class="link"><a href="#features">Features</a></li>
+            <li class="link"><a href="#pricing">Pricing</a></li>
+            <li class="link"><a href="#about">About</a></li>
+            <li class="link"><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="demo-content">
+        <h1>Enhanced Sticky Navbar</h1>
+        <p>Scroll down to see the navbar stick to the top with beautiful glassmorphism effects, gradient underlines, and
+            smooth hover animations. The navbar features backdrop blur, subtle shadows, and responsive design.</p>
+        <p>Key enhancements: Glassmorphism background, gradient hover underlines, lift effect on hover, active states,
+            mobile responsiveness, and modern typography.</p>
+    </div>
+
+</body>
+</html>
