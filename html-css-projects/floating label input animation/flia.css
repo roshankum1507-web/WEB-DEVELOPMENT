@@ -14,17 +14,18 @@ body {
     padding: 2rem;
 }
 
-#firstName{
+#firstName {
     height: 70px;
 }
 
-#email{
+#email {
     height: 70px;
 }
 
-#password{
+#password {
     height: 70px;
 }
+
 .container {
     display: flex;
     flex-direction: column;
@@ -74,14 +75,14 @@ body {
     font-weight: 500;
     pointer-events: none;
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    /* background: rgba(255, 255, 255, 0.1); */
+
     padding: 0.1rem 0.4rem;
     border-radius: 6px;
     backdrop-filter: blur(12px);
 }
 
-.input:focus ~ .userlabel,
-.input:valid ~ .userlabel {
+.input:focus~.userlabel,
+.input:valid~.userlabel {
     top: 0.3rem;
     left: 1rem;
     font-size: 13px;
@@ -90,7 +91,7 @@ body {
     padding: 0.15rem 0.5rem;
 }
 
-.input:valid ~ .userlabel {
+.input:valid~.userlabel {
     color: rgba(255, 255, 255, 0.9);
 }
 
@@ -117,7 +118,7 @@ body {
     body {
         padding: 1rem;
     }
-    
+
     .input {
         padding: 1.2rem 0.9rem 0.5rem 0.9rem;
     }
