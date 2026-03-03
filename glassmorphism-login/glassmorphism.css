@@ -1,0 +1,29 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    height: 100vh;
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial;
+}
+.glass-card {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.2);
+    width: 350px;
+}
+input {
+    width: 100%; padding: 12px; margin: 10px 0;
+    border: none; border-radius: 10px;
+    background: rgba(255,255,255,0.2);
+    color: white;
+}
+button {
+    width: 100%; padding: 12px; background: #ff6b6b;
+    border: none; border-radius: 10px; color: white;
+    font-weight: bold; cursor: pointer;
+}
