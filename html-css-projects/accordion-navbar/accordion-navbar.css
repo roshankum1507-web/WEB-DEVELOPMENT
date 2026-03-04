@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background: linear-gradient(135deg, #000000 0%, #340463 100%);
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.navbar {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-trigger {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-trigger:hover {
+    background: rgba(255, 255, 255, 0.2);
+    padding-left: 2.5rem;
+}
+
+.nav-trigger::after {
+    content: '▼';
+    position: absolute;
+    right: 2rem;
+    transition: transform 0.3s ease;
+    font-size: 0.8rem;
+}
+
+.nav-trigger[aria-expanded="true"]::after {
+    transform: rotate(180deg);
+}
+
+.submenu {
+    max-height: 0;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.1);
+    transition: max-height 0.4s ease-out;
+}
+
+.nav-item[open] .submenu {
+    max-height: 200px;
+}
+
+.submenu-item {
+    padding: 1rem 3rem;
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    display: block;
+    transition: all 0.2s ease;
+}
+
+.submenu-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+    padding-left: 4rem;
+    color: white;
+}
+
+.content {
+    max-width: 800px;
+    margin: 3rem auto 0;
+    padding: 2.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+}
