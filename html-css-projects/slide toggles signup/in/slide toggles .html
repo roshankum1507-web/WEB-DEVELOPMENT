@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfect Sliding Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="slide toggles.css">
 </head>
 
@@ -15,18 +18,22 @@
 
         <div class="forms">
             <div class="form login">
+                <p class="tag">Member Access</p>
                 <h2>Login</h2>
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Password">
-                <button>Login</button>
+                <p class="sub">Use your account details to continue.</p>
+                <input type="email" placeholder="Email" autocomplete="email" required>
+                <input type="password" placeholder="Password" autocomplete="current-password" required>
+                <button type="button">Login</button>
             </div>
 
             <div class="form signup">
+                <p class="tag">Create Account</p>
                 <h2>Sign Up</h2>
-                <input type="text" placeholder="Username">
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Password">
-                <button>Sign Up</button>
+                <p class="sub">Set up your profile in a few seconds.</p>
+                <input type="text" placeholder="Username" autocomplete="username" required>
+                <input type="email" placeholder="Email" autocomplete="email" required>
+                <input type="password" placeholder="Password" autocomplete="new-password" required>
+                <button type="button">Sign Up</button>
             </div>
         </div>
 

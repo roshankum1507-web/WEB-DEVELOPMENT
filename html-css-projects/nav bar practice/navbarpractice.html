@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exact Navbar</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&display=swap');
         
         * {
             margin: 0;
@@ -14,38 +14,93 @@
         }
 
         body {
-            padding: 40px;
-            background-color: #000000c8;
+            min-height: 100vh;
+            padding: 40px 18px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            font-family: 'Manrope', sans-serif;
+            background:
+                radial-gradient(circle at 15% 15%, rgba(120, 157, 236, 0.3) 0%, transparent 35%),
+                radial-gradient(circle at 85% 5%, rgba(127, 220, 210, 0.25) 0%, transparent 28%),
+                linear-gradient(135deg, #0d162a 0%, #1d2f4f 45%, #2f4366 100%);
         }
 
         nav {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
-            background: white;
-            border-radius: 40px;
-            padding: 12px 24px;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.12);
-            border: 1px solid rgba(0,0,0,0.05);
+            gap: 24px;
+            background: rgba(255, 255, 255, 0.92);
+            border-radius: 18px;
+            padding: 12px 16px;
+            box-shadow: 0 14px 36px rgba(4, 12, 32, 0.28);
+            border: 1px solid rgba(255, 255, 255, 0.65);
             margin: 0 auto;
-            max-width: 550px;
-            font-family: 'Jockey One', sans-serif;
+            width: min(900px, 100%);
+        }
+
+        .brand {
+            color: #13253f;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: 0.2px;
+            white-space: nowrap;
         }
 
         ul {
             display: flex;
             list-style: none;
-            gap: 32px;
+            gap: 8px;
+            flex-wrap: wrap;
         }
 
         a {
-            color: #000000;
+            color: #1f3456;
             text-decoration: none;
-            font-size: 15px;
-            font-weight: 400;
-            padding: 8px 12px;
-            border-radius: 16px;
-            text-shadow:4px;
+            font-size: 0.92rem;
+            font-weight: 600;
+            padding: 9px 13px;
+            border-radius: 10px;
+            transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+        }
+
+        ul a:hover,
+        ul a.active {
+            background: linear-gradient(130deg, #1f7bdf, #2cbec4);
+            color: #ffffff;
+            transform: translateY(-1px);
+        }
+
+        .cta {
+            background: #102544;
+            color: #ffffff;
+            border-radius: 11px;
+            padding: 10px 14px;
+            font-size: 0.9rem;
+        }
+
+        .cta:hover {
+            background: #1b3963;
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 760px) {
+            nav {
+                gap: 12px;
+                padding: 12px;
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            ul {
+                justify-content: center;
+            }
+
+            .cta {
+                text-align: center;
+            }
         }
 
         
@@ -54,13 +109,15 @@
 </head>
 <body>
     <nav>
+        <a class="brand" href="#">NovaUI</a>
         <ul>
-            <li><a href="#">Home</a></li>
+            <li><a href="#" class="active">Home</a></li>
             <li><a href="#">Features</a></li>
             <li><a href="#">Store</a></li>
             <li><a href="#">Feedback</a></li>
             <li><a href="#">About</a></li>
         </ul>
+        <a class="cta" href="#">Get Started</a>
     </nav>
 </body>
 </html>
