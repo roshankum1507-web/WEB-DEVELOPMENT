@@ -1,25 +1,40 @@
-# Learning Journey Guide
+<h1 align="center">Learning Journey Guide</h1>
+<p align="center">A structured repository for web development practice, learning notes, and project organization.</p>
 
-## Overview
-This document serves as a guide to the learning journey through web development projects in this repository.
+---
 
-## Repo Structure Conventions
-- **docs/**: Documentation files related to the project.
-- **src/**: Source code for the projects.
-- **tests/**: Unit and integration tests for the source code.
+### Overview
+This repository documents my web development learning journey and the projects I build along the way. It is organized to make practice work easier to follow, run, and expand.
 
-## How to Run Projects Locally
+### Repository Structure
+- `docs/` - Notes, guides, and supporting documentation
+- `src/` - Project source files
+- `tests/` - Test files where needed
+- `html-css-projects/` - Practice work and UI exercises
+
+### How to Run Projects
 1. Clone the repository.
-2. Navigate to the desired project directory.
-3. Install dependencies using `npm install`.
-4. Run the project using `npm start`.
+2. Open the project folder you want to run.
+3. Install dependencies with `npm install` if required.
+4. Start the project with the provided command, usually `npm start` or `npm run start`.
 
-## How to Add a New Project
-1. Create a new folder under **src/**.
-2. Add your project files and update the main README with details.
+### Working Style
+- Build one small project at a time
+- Keep code readable and easy to revisit
+- Improve the UI and structure on every iteration
+- Document what each project is meant to teach
 
-## Table of Projects Placeholder
-| Project Name | Description  |
-|--------------|--------------|
-| Project 1    | Brief description of Project 1 |
-| Project 2    | Brief description of Project 2 |
+### Projects Table
+| Project | Status | Focus |
+| --- | --- | --- |
+| Project 1 | In progress | Core layout and frontend practice |
+| Future projects | Planned | More HTML, CSS, and JavaScript learning |
+
+### Goals
+- Create a clearer learning path
+- Make every project more organized
+- Turn practice into a stronger portfolio
+
+---
+
+<p align="center">This repo is the record of steady frontend growth.</p>
